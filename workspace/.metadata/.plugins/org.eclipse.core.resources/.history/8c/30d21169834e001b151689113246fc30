@@ -9,9 +9,9 @@ public class ArrayListTest04 {
 		ArrayList<String> nick = new ArrayList<>();
 		
 		String[] nicks = {"뚱뚱","다람이","뚱이네부모님과함께","집게사장님딸","3122341","몊글자를해야하나","스폰지밥","집게리아","그래픽카드망가짐","플랑크톤사장","징징이","뚱이","전화번호부","더이상은생각하기힘듦","뭘더넣을까싶다"};
-		for(int i = 0;i < 5; i++)
+		for(int i = 0;i < 10; i++)
 		{
-			nick.add(nicks[(int) (Math.random()*nicks.length)]);
+			nick.add(nicks[(int) ((Math.random()*100)+1)-(nick.size()-10)]);
 			
 		}
 		System.out.println(nick);
