@@ -15,6 +15,7 @@ public class ArrayListTest04 {
 			
 		}
 		System.out.println(nick);
+		
 		String nickname = "";
 		ArrayList<String> nickmax = new ArrayList<>();
 		for(String str : nick)
@@ -31,6 +32,16 @@ public class ArrayListTest04 {
 			
 		}
 		System.out.println(nickmax);
+		
+		
+		
+		//선생님 방법
+		//제일긴 별명의길이가 저장될 변수를 선언하고
+		//이 변수는 List의 첫번째 데이터의 길이로 초기화한다
+		
+		
+		
+		
 
 	}
 
