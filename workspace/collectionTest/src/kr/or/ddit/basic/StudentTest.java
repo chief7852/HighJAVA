@@ -3,6 +3,7 @@ package kr.or.ddit.basic;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 /*
     문제 ) 학번, 이름, 국어점수, 영어점수, 수학점수, 총점, 등수를
@@ -21,7 +22,23 @@ import java.util.Comparator;
     	(등수는 List에 전체 데이터가 추가된 후에 저장되도록 한다.)
  */
 public class StudentTest {
-
+	
+	//등수를 구하는 메서드
+	public void setRanking(List<Student> stdList)
+	{
+		for(int i=0; i <stdList.size(); i++)
+		{
+			int rank=1;
+			for(int j =0; j<stdList.size();j++)
+			{
+				if(stdList.get(i).getSum() < stdList.get(j).getSum()){
+				rank++;	
+				}
+				stdList.get(i).setRank(rank);
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
 		ArrayList<Student> stuDent = new ArrayList<>();
 		stuDent.add(new Student(19,"홍준표",38,59,82));
@@ -174,7 +191,11 @@ class SortSNum implements Comparator<Student>
 {
 	@Override
 	public int compare(Student stu1, Student stu2) {
-		
+		if(stu1.getSum() == stu2.getSum())
+		{
+			return new Integer (stu1.getSnum()).compareTo(stu2.getSnum());
+		}else{
 		return new Integer(stu1.getSum()).compareTo(stu2.getSum())* -1;
-	}
+		}	
+		}
 }

@@ -1,0 +1,38 @@
+package homework;
+
+import java.util.Scanner;
+
+public class Lotto {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		buy:while(true)
+		{
+			System.out.print("==========================\n"
+					+ "Lotto 프로그램\n"
+					+ "--------------------------\n"
+					+ "1. Lotto 구입\n"
+					+ "2. 프로그램 종료\n"
+					+ "==========================\n"
+					+ "메뉴선택 : ");
+			int menu = Integer.parseInt(s.nextLine());
+			switch(menu)
+			{
+			case 1 : System.out.println("\nLotto 구입시작\n(1000원에 로또번호 하나입니다.)"
+					+ "\n금액입력 : ");
+			   		 
+			case 2 : break buy;
+			}
+		}
+	}
+	
+	void lottonum(int qty)
+	{
+		for(int i=0;i<qty;i++)
+		{
+			
+		}
+		
+	}
+
+}

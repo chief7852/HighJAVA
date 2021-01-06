@@ -1,0 +1,22 @@
+package homework;
+
+import java.util.Scanner;
+
+public class Lotto {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		buy:while(true)
+		{
+			System.out.print("==========================\n"
+					+ "Lotto 프로그램\n"
+					+ "--------------------------\n"
+					+ "1. Lotto 구입\n"
+					+ "2. 프로그램 종료\n"
+					+ "==========================\n"
+					+ "메뉴선택 :");
+			int menu = Integer.parseInt(s.nextLine());
+		}
+	}
+
+}

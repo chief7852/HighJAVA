@@ -1,0 +1,9 @@
+package homework;
+
+public class ex {
+	public static void main(String[] args) {
+		int money = 9830;
+		int change = money%1000;
+		System.out.println(change);
+	}
+}
