@@ -36,4 +36,5 @@
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="homework.Phone"/>
+<fullyQualifiedTypeName name="java.lang.Iterable"/>
 </qualifiedTypeNameHistroy>

@@ -85,7 +85,7 @@ import java.util.Scanner;
 	 	 프로그램종료....
 	 */
 public class PhoneBooktest {
-	public static HashMap<String, Phone> phoneBookMap=new HashMap<>();;
+	public static HashMap<String, Phone> phoneBookMap=new HashMap<>();
 	static Scanner s = new Scanner(System.in);
 	public static void main(String[] args) 
 	{
@@ -98,12 +98,21 @@ public class PhoneBooktest {
 			switch(choi)
 			{
 			case "1" :p.numAdd();break;
-			case "2" :p.numAlter();break;
-			case "3" :p.numDel();break;
-			case "4" :p.numSer();break;
-			case "5" :p.numAll();break;
+			case "2" :if(phoneBookMap.size()==0)
+						{System.out.println("아무 정보가 없습니다");break;}
+						p.numAlter();break;
+			case "3" :if(phoneBookMap.size()==0)
+						{System.out.println("아무 정보가 없습니다");break;}
+						p.numDel();break;
+
+			case "4" :if(phoneBookMap.size()==0)
+						{System.out.println("아무 정보가 없습니다");break;}
+						p.numSer();break;
+			case "5" :if(phoneBookMap.size()==0)
+						{System.out.println("아무 정보가 없습니다");break;}
+						p.numAll();break;
 			case "0" :break nojam;
-				
+
 			}
 		}
 	}
@@ -115,6 +124,8 @@ public class PhoneBooktest {
 		System.out.println("새롭게 등록할 전화번호 정보를 입력하세요.");
 		System.out.print("이름 >> ");
 		String name = s.nextLine();
+		if(phoneBookMap.containsKey(name)==true){System.out.println("이미 있는번호입니다.");}
+		else{
 		System.out.print("전화번호 >> ");
 		String tel = s.nextLine();
 		System.out.print("주소>> ");
@@ -124,6 +135,7 @@ public class PhoneBooktest {
 		phone.setName(name);
 		phone.setTel(tel);
 		phoneBookMap.put(name,phone);
+		}
 		
 			
 	}

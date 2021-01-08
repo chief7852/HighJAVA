@@ -5,5 +5,6 @@ public class ex {
 		int money = 7300;
 		int change = money%1000;
 		System.out.println(change);
+//		Iterable<T>;
 	}
 }
