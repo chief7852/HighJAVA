@@ -2,9 +2,9 @@ package homework;
 
 public class ex {
 	public static void main(String[] args) {
-		int money = 7300;
-		int change = money%1000;
-		System.out.println(change);
+		int money = 739;
+		int s =money/10;
+		System.out.printf("%s", s);
 //		Iterable<T>;
 	}
 }

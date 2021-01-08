@@ -9,22 +9,18 @@ public class Knumberkey {
 	public static void main(String[] args) {
 		int[] array ={1, 5, 2, 6, 3, 7, 4};
 		int[][] commands = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
-		int[] answer={};
-		answer= new int[commands.length];
-		int i=0;
-		for(int[] ijk : commands)
+		ArrayList<Integer> answer = new ArrayList<>();
+		
+		ArrayList<Integer> temp = new ArrayList<>();
+		for(int i = 0;i <commands.length;i++)
 		{
-			
-			ArrayList<Integer> temp = new ArrayList<>();
-			for(int j = ijk[0]-1;j <=ijk[1]-1;j++)
+			int a , b , c = 0;
+			for(int j = 0; j <commands[i].length;j++)
 			{
-				temp.add(array[j]);
+				
 			}
-			Collections.sort(temp);
-			answer[i] = temp.get(i);
-			i ++;
 		}
-		System.out.println(answer);
+
 
 	}
 

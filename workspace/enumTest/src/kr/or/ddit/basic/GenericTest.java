@@ -46,6 +46,7 @@ class NonGenericClass
 class MyGeneric<T>
 {
 	private T value;
+	
 	public void setValue(T value)
 	{
 		this.value = value;
@@ -54,6 +55,10 @@ class MyGeneric<T>
 	public T getValue() {
 		return value;
 	}
+
+	
+
+	
 }
 
 public class GenericTest {
@@ -77,11 +82,17 @@ public class GenericTest {
 //		System.out.println("rtnNg3 = " + rtnNg3);
 		
 		MyGeneric<String> mg1 = new MyGeneric<>();
-		MyGeneric<String> mg2 = new MyGeneric<>();
+		MyGeneric<Integer> mg2 = new MyGeneric<>();
 		
 		mg1.setValue("가나다라");
-		mg1.setValue(500);
+		mg2.setValue(500);
 
+		
+		String rtnMg1 = mg1.getValue();
+		int rtnMg2 = mg2.getValue();
+		
+		System.out.println(rtnMg1);
+		System.out.println(rtnMg2);
 	}
 
 }
