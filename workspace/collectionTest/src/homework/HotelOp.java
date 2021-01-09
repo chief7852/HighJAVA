@@ -211,7 +211,7 @@ import java.util.Scanner;
 */
 public class HotelOp {
 	public static HashMap<Integer, Room> roomAll = new HashMap<>();
-	static HotelOp sc = new HotelOp();
+	static HotelOp hotel = new HotelOp();
 	static Prints_all pr = new Prints_all();
 	static Scanner s = new Scanner(System.in);
 	static Room r = new Room();
@@ -225,11 +225,11 @@ public class HotelOp {
 			String menu = s.nextLine();
 			switch(menu)
 			{
-			case "1" :sc.checkIn();		break;						 //체크인
+			case "1" :hotel.checkIn();		break;						 //체크인
 						
-			case "2" :sc.checkout(); break;						//체크아웃
-			case "3" : sc.lookRoom(); break; 									//객실상태
-			case "4" : pr.printClose();	break hotel;				//업무종료
+			case "2" :hotel.checkOut(); break;						//체크아웃
+			case "3" : hotel.lookRoom(); break; 									//객실상태
+			case "4" : pr.printClose();	System.exit(1);			//업무종료
 			
 			}
 			
@@ -237,11 +237,11 @@ public class HotelOp {
 
 	}
 	//체크아웃
-	private void checkout()
+	private void checkOut()
 	{
 		pr.outCheck();
 		int rnum = Integer.parseInt(s.nextLine());
-		if(sc.romchek(rnum)==true){System.out.println(rnum+"호 객실은 존재하지 않습니다.");}
+		if(hotel.romChek(rnum)==true){System.out.println(rnum+"호 객실은 존재하지 않습니다.");}
 		else if(roomAll.containsKey(rnum)==true)
 		{
 			String name = roomAll.get(rnum).getCname();
@@ -250,32 +250,56 @@ public class HotelOp {
 		}else{System.out.println(rnum+"호 객실에는 체크인 한 사람이 없습니다.");}
 	}
 	
-	//객실상태
+	//객실상태확인
 	private void lookRoom()
 	{
-		ArrayList<Integer> List = new ArrayList<>(roomAll.keySet());
 		pr.lookrom();
-		for(int key : List)
+		for(int i =2; i <= 4;i++)
 		{
-			String Cname =roomAll.get(key).getCname();
-			int Rnum =roomAll.get(key).getRnum();
-			String Rname =roomAll.get(key).getRname();
-			System.out.printf("%s	 %s 	%s\n",Rnum,Rname,Cname);
+			for(int j =1;j < 10;j++)
+			{
+				String cName= "  -";
+				int rNum =Integer.parseInt(i+"0"+j);
+				String rName = hotel.roomName(rNum);
+				if(roomAll.containsKey(rNum)==true)
+				{
+					cName =roomAll.get(rNum).getCname();	
+				} 
+				System.out.printf("%s\t%s\t\t%s\n",rNum,rName,cName);
+			}
 		}
-		
 	}
+	
+	
+	
+	//객실상태
+	
+//	
+//	private void lookRoom()
+//	{
+//		ArrayList<Integer> List = new ArrayList<>(roomAll.keySet());
+//		pr.lookrom();
+//		for(int key : List)
+//		{
+//			String Cname =roomAll.get(key).getCname();
+//			int Rnum =roomAll.get(key).getRnum();
+//			String Rname =roomAll.get(key).getRname();
+//			System.out.printf("%s	 %s 	%s\n",Rnum,Rname,Cname);
+//		}
+//		
+//	}
 	
 	//체크인
 	private void checkIn()
 	{
 		pr.printCheck();
 		int rnum = Integer.parseInt(s.nextLine());
-		if(sc.romchek(rnum)==true){System.out.println(rnum+"호 객실은 이미 손님이 있습니다.");}
-		else if(rnum/10 != 20&&rnum/10 != 30&&rnum/10 !=40){System.out.println(rnum+"호 객실은 존재하지 않습니다.");}
+		if(hotel.cromChek(rnum)==true){System.out.println(rnum+"호 객실은 이미 손님이 있습니다.");}
+		else if(hotel.romChek(rnum)==true){System.out.println(rnum+"호 객실은 존재하지 않습니다.");}
 		else{
 			
 			System.out.println("이름입력>> ");
-			String Rname =sc.roomName(rnum);
+			String Rname =hotel.roomName(rnum);
 			String Cname = s.nextLine();
 			r.setCname(Cname);
 			r.setRname(Rname);
@@ -286,8 +310,16 @@ public class HotelOp {
 		}
 	}
 	
-	//방확인
-	private boolean romchek(int rnum)
+	//방상태확인
+	private boolean cromChek(int rnum)
+	{
+		boolean a = roomAll.containsKey(rnum);
+		return a;
+	}
+	
+	
+	//방존재확인
+	private boolean romChek(int rnum)
 	{
 		boolean a =rnum/10 != 20&&rnum/10 != 30&&rnum/10 !=40;
 		return a;
@@ -295,7 +327,7 @@ public class HotelOp {
 	//방종류 확인
 	private String roomName(int rnum)
 	{
-		String Rname = (rnum/10 == 20)? "싱글룸":(rnum/10 == 30)? "더블룸":(rnum/10 !=40)?"스위트룸":"";
+		String Rname = (rnum/10 == 20)? "싱글룸":(rnum/10 == 30)? "더블룸":(rnum/10 !=40)?"스위트룸":"스위트룸";
 		return Rname;
 	}
 
@@ -371,7 +403,7 @@ class Prints_all
 		System.out.println("----------------------------------------------");
 		System.out.println("		현재 객실 상태");
 		System.out.println("----------------------------------------------");
-		System.out.println("방 번호	 방 종류	 투숙객 이름");
+		System.out.println("방 번호\t방 종류	\t투숙객 이름");
 		System.out.println("----------------------------------------------");
 		
 	}
