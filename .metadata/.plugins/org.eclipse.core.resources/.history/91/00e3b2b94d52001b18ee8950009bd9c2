@@ -1,7 +1,10 @@
 package homework;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
+
+import toy.Room;
 
 /*
 문제) 호텔 객실을 관리하는 프로그램을 작성하시오.
