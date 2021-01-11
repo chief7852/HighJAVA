@@ -1,0 +1,19 @@
+package kr.or.ddit.basic;
+
+import java.util.*;
+
+public class EnumTest {
+	public static void main(String[] args) {
+		System.out.println("RED => " + ConstTest.RED);
+		System.out.println("Green => " + ConstTest.GREEN);
+		System.out.println("Three => " + ConstTest.THREE);
+		
+		if(ConstTest.RED == ConstTest.ONE)
+		{
+			System.out.println("...");
+		}else{
+			System.out.println("???");
+		}
+
+	}
+}
