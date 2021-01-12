@@ -1,0 +1,11 @@
+package proGramers;
+
+public class 문자열내림차순 {
+
+	public static void main(String[] args) {
+		String s = "Zbcdefg";
+		String answer = "";
+		System.out.println(s.indexOf(0));
+	}
+
+}

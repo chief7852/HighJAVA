@@ -1,0 +1,26 @@
+package proGramers;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+
+public class 같은숫자는싫어 {
+
+	public static void main(String[] args) {
+		int[] arr = {1,1,3,3,0,1,1};
+		HashSet<Integer> set = new HashSet<>();
+		Iterator it = set.iterator();
+		for(int i : arr)
+		{
+			System.out.println(i);
+			set.add(i);
+		}
+		
+		while(it.hasNext())
+		{
+			System.out.println(set.next());
+		}
+
+	}
+
+}

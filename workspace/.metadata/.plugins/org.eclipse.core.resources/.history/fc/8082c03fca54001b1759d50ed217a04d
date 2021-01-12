@@ -1,0 +1,13 @@
+package proGramers;
+
+public class 문자열내림차순 {
+
+	public static void main(String[] args) {
+		String s = "Zbcdefg";
+		String answer = "";
+		System.out.println(s.charAt(0));
+		int a=(int)s.charAt(0);
+		System.out.println(a);
+	}
+
+}

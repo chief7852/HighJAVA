@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Vector"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.ArrayListTest02"/>
-<fullyQualifiedTypeName name="java.lang.Character.Subset"/>
-<fullyQualifiedTypeName name="javax.naming.LimitExceededException"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.Browser"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Member"/>
@@ -23,7 +18,6 @@
 <fullyQualifiedTypeName name="kr.or.ddit.basic.ArrayListTest01"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="homework.phone"/>
 <fullyQualifiedTypeName name="homework.PhoneBooktest"/>
@@ -47,11 +41,8 @@
 <fullyQualifiedTypeName name="java.awt.MultipleGradientPaint.ColorSpaceType"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.MyThread1"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.MyThread2"/>
-<fullyQualifiedTypeName name="java.lang.Runnable"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.MyRunner"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadTest04"/>
-<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.SumThread"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.lang.Double"/>
@@ -60,4 +51,13 @@
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="java.util.concurrent.ArrayBlockingQueue"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.MyCountDown"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.DataInput"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.InputRP"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
