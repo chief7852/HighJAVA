@@ -1,4 +1,6 @@
 package homework;
+
+
 /*
  		문제) 10마리의 말들이 경주하는 경마 프로그램을 작성하시오
  		말은 Horse라는 이름의 쓰레드 클래스로 작성하는데,
@@ -24,11 +26,15 @@ public class HorseGame {
 		Runnable[] hOrse = new Horse[]{ new Horse("01"),new Horse("02"),new Horse("03")
 									,new Horse("04"),new Horse("05"),new Horse("06")
 									,new Horse("07"),new Horse("08"),new Horse("09"),new Horse("10")};
-		for(Runnable a : hOrse)
+		
+		Thread[] th = new Thread[hOrse.length];
+		for(int i=0;i<hOrse.length;i++)
 		{
-			System.out.println("s");
-			Thread th = new Thread(a);
+			th[i] = new Thread(hOrse[i]);
+			th[i].start();
+			
 		}
+		
 //		Thread th = new Thread(hOrse[0]);
 //		th.start();
 		
@@ -36,24 +42,75 @@ public class HorseGame {
 		
 	}
 }
+class Delay implements Runnable{
+	@Override
+	public void run() {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO: handle exception
+		}
+	}
+}
 
 class Horse implements Runnable{
-	public static int rank;
-	public static int location;
+	public static int currank = 0;
+	private int rank;
+	private int location;
 	private String hname;
-	public Horse(String hname)
-	{
+	public Horse(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getRank() {
+		return rank;
+	}
+
+	public void setRank(int rank) {
+		this.rank = rank;
+	}
+
+	public int getLocation() {
+		return location;
+	}
+
+	public void setLocation(int location) {
+		this.location = location;
+	}
+
+//	public String getHname() {
+//		return hname;
+//	}
+
+	public void setHname(String hname) {
 		this.hname = hname;
 	}
+	
+	@Override
+	public String toString()
+	{
+		return hname+"번말은"+rank+"등입니다.";
+	}
+	
 	@Override
 	public void run() {
 		
-		
+		ab:while(true){
 		for(int i = 0; i < 20;i++)
 		{
 			StringBuffer load = new StringBuffer("-------------------");
 			System.out.println(hname+load.insert(i, ">"));
-			
+			Runnable del = new Delay();
+			Thread th2 = new Thread(del);
+			th2.start();
+			if(i == 19){break ab;}
+			try {
+				Thread.sleep((int)(Math.random()*1000));
+			} catch (InterruptedException e) {
+				// TODO: handle exception
+			}
+		}
+
 		}
 	}
 }
