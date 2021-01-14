@@ -42,49 +42,36 @@ public class HorseGame {
 		
 	}
 }
-class Delay implements Runnable{
-	@Override
-	public void run() {
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO: handle exception
-		}
-	}
-}
+//class Delay implements Runnable{
+//	@Override
+//	public void run() {
+//		try {
+//			Thread.sleep(1000);
+//		} catch (InterruptedException e) {
+//			// TODO: handle exception
+//		}
+//	}
+//}
 
 class Horse implements Runnable{
-	public static int currank = 0;
+//	public static int currank = 0;
 	private int rank;
 	private int location;
 	private String hname;
+	
 	public Horse(String string) {
-		// TODO Auto-generated constructor stub
+		this.hname = string;
 	}
 
-	public int getRank() {
-		return rank;
-	}
-
-	public void setRank(int rank) {
-		this.rank = rank;
-	}
-
-	public int getLocation() {
-		return location;
-	}
-
-	public void setLocation(int location) {
-		this.location = location;
-	}
+	
 
 //	public String getHname() {
 //		return hname;
 //	}
-
-	public void setHname(String hname) {
-		this.hname = hname;
-	}
+//
+//	public void setHname(String hname) {
+//		this.hname = hname;
+//	}
 	
 	@Override
 	public String toString()
@@ -96,13 +83,14 @@ class Horse implements Runnable{
 	public void run() {
 		
 		ab:while(true){
-		for(int i = 0; i < 20;i++)
+		for(int i = 0; i < 50;i++)
 		{
-			StringBuffer load = new StringBuffer("-------------------");
+//			currank = i;
+			StringBuffer load = new StringBuffer("-------------------------------------------------");
 			System.out.println(hname+load.insert(i, ">"));
-			Runnable del = new Delay();
-			Thread th2 = new Thread(del);
-			th2.start();
+//			Runnable del = new Delay();
+//			Thread th2 = new Thread(del);
+//			th2.start();
 			if(i == 19){break ab;}
 			try {
 				Thread.sleep((int)(Math.random()*1000));
