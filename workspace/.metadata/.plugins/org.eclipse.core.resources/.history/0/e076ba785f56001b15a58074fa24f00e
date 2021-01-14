@@ -67,10 +67,7 @@ class Printinloc implements Runnable
 		{
 			for(int i=0;i < horse.length;i++)
 			{
-				String hname = (Horse)horse[i].getClass().getHname();
-				System.out.print((Horse)horse[i].getHname());
 				StringBuffer print = new StringBuffer("-------------------------------------------------");
-				
 				System.out.println(print.insert(((Horse) horse[i]).getLocation(),">"));
 			}
 			try {

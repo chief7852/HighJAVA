@@ -33,7 +33,7 @@ public class HorseGame {
 			if(i<10)hOrse[i-1] = new Horse(hname);
 			else hOrse[i-1] = new Horse(hname);
 		}
-		Thread pth =new Thread(print);
+		
 		Thread[] th = new Thread[hOrse.length];
 		for(int i=0;i<hOrse.length;i++)
 		{
@@ -41,21 +41,20 @@ public class HorseGame {
 			th[i].start();
 			
 		}
-		pth.start();
 		
 
 		
 	}
 }
 //현재위치를 가지고 출력하기
-class Printinloc implements Runnable 
+class Printinloc implements Runnable
 {
-	private Runnable[] horse;
+	private Horse[] horse;
 	
 	public Printinloc(Runnable[] hOrse2) {
 		this.horse = hOrse2;
 	}
-	public Runnable[] getHorse() {
+	public Horse[] getHorse() {
 		return horse;
 	}
 	public void setHorse(Horse[] horse) {
@@ -67,16 +66,8 @@ class Printinloc implements Runnable
 		{
 			for(int i=0;i < horse.length;i++)
 			{
-				String hname = (Horse)horse[i].getClass().getHname();
-				System.out.print((Horse)horse[i].getHname());
 				StringBuffer print = new StringBuffer("-------------------------------------------------");
-				
-				System.out.println(print.insert(((Horse) horse[i]).getLocation(),">"));
-			}
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO: handle exception
+				System.out.println(print.insert(horse[i].getLocation(),">"));
 			}
 		}
 		
@@ -85,7 +76,7 @@ class Printinloc implements Runnable
 
 
 //위치값 구하기
-class Horse implements Runnable , Comparable<Horse>
+class Horse implements Runnable
 {
 	public static int currentRank=0;
 	private int rank;
@@ -122,16 +113,6 @@ class Horse implements Runnable , Comparable<Horse>
 	}
 	
 	@Override
-	public int compareTo(Horse o) {
-		return Integer.compare(rank, o.getRank());
-	}
-
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return "경주마"+hname+"은"+rank+"입니다.";
-	}
-	@Override
 	public void run() {
 		
 		for(int i= 0; i< 50; i++)
@@ -139,7 +120,7 @@ class Horse implements Runnable , Comparable<Horse>
 			this.location=i;
 			
 			try {
-				Thread.sleep((int)(Math.random()*500));
+				Thread.sleep((int)(Math.random()*50));
 			} catch (InterruptedException e) {
 				// TODO: handle exception
 			}
