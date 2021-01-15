@@ -3,7 +3,21 @@
     <fullyQualifiedTypeName name="proGramers.Solution"/>
     <fullyQualifiedTypeName name="java.lang.InternalError"/>
     <fullyQualifiedTypeName name="java.awt.image.ImagingOpException"/>
-    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
     <fullyQualifiedTypeName name="homework.Delay"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.basic.WorkObject"/>
+    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadA"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.basic.DataBox"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.basic.ProducerThread"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.basic.ConsumerThread"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.nio.file.Path"/>
+    <fullyQualifiedTypeName name="java.nio.file.Paths"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="javaIOTest.FileTest03"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="javax.swing.JFileChooser"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
 </qualifiedTypeNameHistroy>
