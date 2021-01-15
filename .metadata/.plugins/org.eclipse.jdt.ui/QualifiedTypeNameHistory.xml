@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="proGramers.Solution"/>
-<fullyQualifiedTypeName name="java.lang.InternalError"/>
-<fullyQualifiedTypeName name="java.awt.image.ImagingOpException"/>
-<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
-<fullyQualifiedTypeName name="homework.Delay"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="proGramers.Solution"/>
+    <fullyQualifiedTypeName name="java.lang.InternalError"/>
+    <fullyQualifiedTypeName name="java.awt.image.ImagingOpException"/>
+    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+    <fullyQualifiedTypeName name="homework.Delay"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
 </qualifiedTypeNameHistroy>
