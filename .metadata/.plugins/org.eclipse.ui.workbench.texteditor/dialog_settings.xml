@@ -15,6 +15,7 @@
 		<item key="wholeword" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="F"/>
 			<item value="System.out.println(file5.getName() + &quot; 만들기 성공&quot;);"/>
 			<item value="null"/>
 		</list>

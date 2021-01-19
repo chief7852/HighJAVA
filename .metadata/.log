@@ -958,3 +958,582 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.genuitec.eclipse.theming.core 4 0 2021-01-18 15:44:19.820
+!MESSAGE Cannot find a common class for org/eclipse/jface/text/BadPartitioningException and org/eclipse/jface/text/BadLocationException
+
+!ENTRY com.genuitec.eclipse.patches 4 0 2021-01-18 15:44:19.825
+!MESSAGE Patches instrumentation extension fix-javadoc.view.styles (Fixing Hyperlink colors in JavaDoc View) has failed to weave class org.eclipse.jdt.internal.ui.infoviews.JavadocView. Extension will be disabled. Error: java.lang.ClassNotFoundException: org.eclipse.jface.text.BadPartitioningException
+!STACK 0
+java.lang.RuntimeException: java.lang.ClassNotFoundException: org.eclipse.jface.text.BadPartitioningException
+	at com.genuitec.eclipse.theming.core.AbstractWeaverExtension$1.getCommonSuperClass(AbstractWeaverExtension.java:72)
+	at org.objectweb.asm.SymbolTable.addMergedType(SymbolTable.java:1202)
+	at org.objectweb.asm.Frame.merge(Frame.java:1299)
+	at org.objectweb.asm.Frame.merge(Frame.java:1213)
+	at org.objectweb.asm.MethodWriter.computeAllFrames(MethodWriter.java:1610)
+	at org.objectweb.asm.MethodWriter.visitMaxs(MethodWriter.java:1546)
+	at org.objectweb.asm.tree.MethodNode.accept(MethodNode.java:769)
+	at org.objectweb.asm.tree.MethodNode.accept(MethodNode.java:649)
+	at org.objectweb.asm.tree.ClassNode.accept(ClassNode.java:452)
+	at com.genuitec.eclipse.theming.core.AbstractWeaverExtension.weave(AbstractWeaverExtension.java:91)
+	at com.genuitec.eclipse.patches.internal.InstrumentationManager$WeavingExtension.weave(InstrumentationManager.java:429)
+	at com.genuitec.eclipse.patches.internal.InstrumentationManager.weave(InstrumentationManager.java:332)
+	at com.genuitec.eclipse.patches.internal.InstrumentationWeaver.weave(InstrumentationWeaver.java:15)
+	at org.eclipse.osgi.internal.weaving.WovenClassImpl.call(WovenClassImpl.java:187)
+	at org.eclipse.osgi.internal.weaving.WovenClassImpl.call(WovenClassImpl.java:1)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.notifyHookPrivileged(ServiceRegistry.java:1338)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.notifyHooksPrivileged(ServiceRegistry.java:1311)
+	at org.eclipse.osgi.internal.weaving.WovenClassImpl.callHooks(WovenClassImpl.java:252)
+	at org.eclipse.osgi.internal.weaving.WeavingHookConfigurator.processClass(WeavingHookConfigurator.java:80)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.processClass(ClasspathManager.java:737)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.defineClass(ClasspathManager.java:708)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findClassImpl(ClasspathManager.java:641)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:609)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:589)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:568)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:346)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:477)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:171)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getConstantValue(JavadocHover.java:987)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.addConstantOrDefaultValue(AbstractJavaCompletionProposal.java:634)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:592)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.jface.text.BadPartitioningException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:606)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at org.eclipse.osgi.internal.framework.ContextFinder.loadClass(ContextFinder.java:147)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:468)
+	at com.genuitec.eclipse.theming.core.AbstractWeaverExtension$1.getCommonSuperClass(AbstractWeaverExtension.java:68)
+	... 34 more
+!SESSION 2021-01-19 08:53:08.925 -----------------------------------------------
+eclipse.buildId=4.18.0.I20201202-1800
+java.version=15.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2021-01-19 08:53:15.300
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-01-19 08:53:15.300
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5fd8302e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@20894afb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-01-19 08:53:18.870
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PC-03'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2021-01-19 16:37:44.242
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package javaIOTest;
+
+import java.io.BufferedInputStream;
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+/*
+	 문제) 이름, 주소, 전화번호를 멤버로 갖는 phone클래스를 작성하고,
+	 	Map을 이용하여 전화번호 정보를 관리하는 프로그램을 작성하시오.
+	 	
+	 	-삭제, 검색 기능은 '이름'을 입력받아서 처리한다.
+	 	
+	 	(Map의 구조는 key값으로 '이름'을 사용하고 , 
+	 	 value값으로는 'Phone클래스의 인스턴스'로 한다.
+	 	 
+	 	 아래 메뉴의 내용을 프로그램하시오
+	-- 추가 조건)
+		1) '6. 전화번호 정보 저장' 메뉴를 추가하고 구현한다.
+			(저장파일명은 'phoneData.dat'로 한다.)
+		2) 프로그램이 시작할 때 저장된 파일이 있으면
+		   그 데이터를 읽어와 Map에 셋팅하여 사용한다.
+		3) 프로그램을 종료할 때 Map의 데이터가 변경되거나
+		   추가 또는 삭제되면 저장한 후 종료되도록 한다.
+	 	 실행예시)
+	 	 ------------------------
+	 	 다음메뉴를 선택하세요.
+	 	 1. 전화번호 등록
+	 	 2. 전화번호 수정
+	 	 3. 전화버호 삭제
+	 	 4. 전화번호 검색
+	 	 5.전화번호 전체 출력
+	 	 0.프로그램 종료
+	 	 -----------------------
+	 	 번호입력 >> 1
+	 	 
+	 	 새롭게 등록할 전화번호 정보를 입력하세요.
+	 	 이름 >>
+	 	전화번호 >> 
+	 	주소 >>
+	 	
+	 	
+	 	 ------------------------
+	 	 다음메뉴를 선택하세요.
+	 	 1. 전화번호 등록
+	 	 2. 전화번호 수정
+	 	 3. 전화버호 삭제
+	 	 4. 전화번호 검색
+	 	 5.전화번호 전체 출력
+	 	 0.프로그램 종료
+	 	 -----------------------
+	 	 번호입력 >> 1
+	 	 
+	 	 새롭게 등록할 전화번호 정보를 입력하세요.
+	 	 이름 >>
+	 	전화번호 >> 
+	 	주소 >>
+	 	
+	 	<홍길동)홍길동은 이미 등록된 사람입니다.
+	 
+	 	------------------------
+	 	 다음메뉴를 선택하세요.
+	 	 1. 전화번호 등록
+	 	 2. 전화번호 수정
+	 	 3. 전화버호 삭제
+	 	 4. 전화번호 검색
+	 	 5.전화번호 전체 출력
+	 	 0.프로그램 종료
+	 	 -----------------------
+	 	 번호입력 >> 5
+	 	 
+	 	 ------------------------------
+	 	  번호     이름    전화번호 		주소
+	 	 ------------------------------	 	 
+	 	 1      홍길동   010-1111-1111   대전시 중구 대흥동
+	 	 ~~~~
+	 	 ~~~~ 
+	 	 ------------------------------	 
+	 	 출력완료..
+	 	 ------------------------------
+	 	 
+	 	 ------------------------
+	 	 다음메뉴를 선택하세요.
+	 	 1. 전화번호 등록
+	 	 2. 전화번호 수정
+	 	 3. 전화버호 삭제
+	 	 4. 전화번호 검색
+	 	 5.전화번호 전체 출력
+	 	 0.프로그램 종료
+	 	 -----------------------
+	 	 번호입력 >> 0
+	 	 
+	 	 프로그램종료....
+	 */
+public class PhoneBooktest {
+	public static HashMap<String, Phone> phoneBookMap=new HashMap<>();
+	static Scanner s = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		PhoneBooktest p = new PhoneBooktest();
+		p.fileCall();
+		nojam:while(true)
+		{
+			p.printer();
+			String choi = s.nextLine();
+			switch(choi)
+			{
+			case "1" :p.numAdd();break;
+			case "2" :if(phoneBookMap.size()==0)
+						{System.out.println("아무 정보가 없습니다");break;}
+						p.numAlter();break;
+			case "3" :if(phoneBookMap.size()==0)
+						{System.out.println("아무 정보가 없습니다");break;}
+						p.numDel();break;
+
+			case "4" :if(phoneBookMap.size()==0)
+						{System.out.println("아무 정보가 없습니다");break;}
+						p.numSer();break;
+			case "5" :if(phoneBookMap.size()==0)
+						{System.out.println("아무 정보가 없습니다");break;}
+						p.numAll();break;
+			case "6" :
+			case "0" :break nojam;
+
+			}
+		}
+	}
+	void fileSet()
+	void fileCall()
+	{
+		try {
+			ObjectInputStream ois = new ObjectInputStream(
+					new BufferedInputStream(
+							new FileInputStream("d:/d_other/phoneData.dat")));
+			Object obj;// 읽어온 객체를 저장할 변수
+			try {
+				System.out.println("객체 읽기 작업 시작...");
+
+				//readObject()메서드가 데이터를 끝까지 다읽어와
+				//더이상 읽어올 데이터가 없으면 EOFException이 발생하고
+				//읽어온 데이터를 저장할 때는 해당 클래스가 없으면
+				//ClassNotFoundException이 발생 할 수 있다.
+				while((obj = ois.readObject())!=null)
+				{
+					//읽어온 데이터를 원래의 객체형으로 형변환 후 사용 한다.
+					Phone phone = (Phone)obj;
+					phone.setAddr(phone.getAddr());
+					phone.setName(phone.getName());
+					phone.setTel(phone.getTel());
+					phoneBookMap.put(phone.getName(),phone);
+				}
+
+			} catch (EOFException e) {
+				// TODO: handle exception
+			}catch (ClassNotFoundException e) {
+				// TODO: handle exception
+			}
+		} catch (IOException e) {
+			// TODO: handle exception
+		}
+	}
+	
+	//전화번호 등록
+	private void numAdd()
+	{
+		System.out.println("새롭게 등록할 전화번호 정보를 입력하세요.");
+		System.out.print("이름 >> ");
+		String name = s.nextLine();
+		if(phoneBookMap.containsKey(name)==true){System.out.println("이미 있는번호입니다.");}
+		else{
+		System.out.print("전화번호 >> ");
+		String tel = s.nextLine();
+		System.out.print("주소>> ");
+		String addr = s.nextLine();
+		Phone phone = new Phone();
+		phone.setAddr(addr);
+		phone.setName(name);
+		phone.setTel(tel);
+		phoneBookMap.put(name,phone);
+		}
+		
+			
+	}
+	
+	private void numAlter()
+	{
+		System.out.println("고칠 전화번호 정보를 입력하세요.");
+		System.out.print("이름 >> ");
+		String name =s.nextLine();
+		if(phoneBookMap.containsKey(name)==true)
+		{
+			System.out.print("전화번호 >> ");
+			String tel = s.nextLine();
+			System.out.print("주소>> ");
+			String addr = s.nextLine();
+			phoneBookMap.get(name).setTel(tel);
+			phoneBookMap.get(name).setAddr(addr);
+		}
+		else {System.out.println("존재 하지 않는 번호입니다.");}
+	}
+	
+	private void numDel()
+	{
+		System.out.println("삭제할 전화번호 정보를 입력하세요.");
+		System.out.print("이름 >> ");
+		String name =s.nextLine();
+		if(phoneBookMap.containsKey(name)==true)
+		{
+			System.out.println("삭제되었습니다.");
+			phoneBookMap.remove(name);
+		}else{System.out.println("존재 하지 않는 번호입니다.");}
+	}
+	
+	private void numSer()
+	{
+		System.out.println("찾고싶은 전화번호의 이름을 입력하세요.");
+		System.out.print("이름 >> ");
+		String name =s.nextLine();
+		if(phoneBookMap.containsKey(name)==true)
+		{
+			String addr =phoneBookMap.get(name).getAddr();
+			String tel = phoneBookMap.get(name).getTel();
+			
+			System.out.println("이름 : "+name+"번호 : "+tel+"주소 : "+addr);
+			
+		}else{System.out.println("존재 하지 않는 번호입니다.");}
+	}
+	
+	private void numAll()
+	{
+		ArrayList<String> List = new ArrayList<>();
+		int i=phoneBookMap.size();
+		System.out.println("------------------------------"
+				+"\n번호\t이름\t전화번호\t주소"
+				+"\n------------------------------");
+		for(String key : phoneBookMap.keySet())
+		{
+			
+			String addr =phoneBookMap.get(key).getAddr();
+			String name =phoneBookMap.get(key).getName();
+			String tel =phoneBookMap.get(key).getTel();
+			System.out.println(i+"\t"+name+"\t"+tel+"\t"+addr);
+			i--;
+		}
+		
+	}
+	
+	private void printer()
+	{
+		System.out.print("------------------------"
+				+ "\n1. 전화번호 등록"
+				+ "\n2. 전화번호 수정"
+				+ "\n3. 전화번호 삭제"
+				+ "\n4. 전화번호 검색"
+				+ "\n5. 전체 전화번호 출력"
+				+ "\n0. 프로그램종료"
+				+ "\n------------------------"
+				+ "\n번호입력>>");
+	}
+}
+
+
+
+
+class Phone{
+	private String name;
+	private String tel;
+	private String addr;
+	
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+	public String getAddr() {
+		return addr;
+	}
+	public void setAddr(String addr) {
+		this.addr = addr;
+	}
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3146)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3316)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:474)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:200)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1141)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1318)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2021-01-19 16:37:44.248
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3146)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3316)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:474)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:200)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1141)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1318)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2021-01-19 16:37:44.253
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3146)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:738)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3316)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1513)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:474)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:200)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1141)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1318)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:113)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:93)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:157)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+!SESSION 2021-01-19 18:49:11.789 -----------------------------------------------
+eclipse.buildId=4.18.0.I20201202-1800
+java.version=15.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2021-01-19 18:49:19.167
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-01-19 18:49:19.167
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@20894afb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@46823e8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-01-19 18:49:22.448
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PC-03'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2021-01-19 18:57:47.423 -----------------------------------------------
+eclipse.buildId=4.18.0.I20201202-1800
+java.version=15.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2021-01-19 19:00:32.550
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-01-19 19:00:32.550
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@55154761,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@304e83a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-01-19 19:00:35.634
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PC-03'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2021-01-19 19:54:50.550 -----------------------------------------------
+eclipse.buildId=4.18.0.I20201202-1800
+java.version=15.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2021-01-19 19:55:00.705
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-01-19 19:55:00.705
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@20b56542,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@35ec675e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-01-19 19:55:04.234
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PC-03'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
