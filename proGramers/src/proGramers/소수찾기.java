@@ -5,23 +5,27 @@ import java.util.ArrayList;
 public class 소수찾기 {
 
 	public static void main(String[] args) {
-		int n = 9999999;
+		int n = 10;
 		int answer = 0;
 		int temp =0;
-		boolean[] a = new boolean[3];
-		for(boolean b : a)
+		boolean[] a = new boolean[n+1];
+		a[0]=true;
+		a[1]=true;
+		for(int i=2;i<=Math.sqrt(n);i++)
 		{
-			System.out.println(b);
-		}
-		System.out.println(Math.sqrt(n));
-//		boolean[] a = new boolean[n-1];
-		for(int i=2; i < Math.sqrt(n);i++)
-		{
-			for(int j=2;j<a.length+1;j++)
+			if(a[i]==false)
 			{
-				
+			for(int j=2*i;j<=n;j+=i)
+			{
+				a[j]=true;
+			}
 			}
 		}
+		for(boolean b : a)
+		{
+			if(b==false) {answer++;}
+		}
+		System.out.println(temp);
 	}
 
 }
