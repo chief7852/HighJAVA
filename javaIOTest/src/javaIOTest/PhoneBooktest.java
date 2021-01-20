@@ -12,6 +12,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
+
+import javax.swing.JFileChooser;
 /*
 	 문제) 이름, 주소, 전화번호를 멤버로 갖는 phone클래스를 작성하고,
 	 	Map을 이용하여 전화번호 정보를 관리하는 프로그램을 작성하시오.
@@ -135,19 +137,18 @@ public class PhoneBooktest {
 		}
 	}
 	void fileSet() {
+		
 		try {
 			FileOutputStream fout = new FileOutputStream("d:/d_other/phoneData.dat");
 			BufferedOutputStream bos = new BufferedOutputStream(fout);
 			ObjectOutputStream oos = new ObjectOutputStream(bos);
-			
-				
 				oos.writeObject(phoneBookMap);
-				
-			
-			oos.close();
+							
+				oos.close();
 		} catch (IOException e) {
 			// TODO: handle exception
 			e.printStackTrace();
+		}finally {
 		}
 	}
 	void fileCall()
@@ -274,7 +275,8 @@ class Phone implements Serializable{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 6785147595104569567L;
+	private static final long serialVersionUID = -1588817426536788537L;
+	
 	private String name;
 	private String tel;
 	private String addr;
