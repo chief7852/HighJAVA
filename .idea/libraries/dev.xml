@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="dev">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../C_Lib/POI" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/../../C_Lib/POI/docs/apidocs" />
+    </JAVADOC>
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../C_Lib/POI" recursive="false" />
+  </library>
+</component>

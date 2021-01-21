@@ -29,6 +29,8 @@ public class FileTest03 {
 		if(file!=null)
 			test.displayFileList(file);
 	}
+	
+	//파일선택
 	public File getDir()
 	{
 		JFileChooser filechooser = new JFileChooser();
