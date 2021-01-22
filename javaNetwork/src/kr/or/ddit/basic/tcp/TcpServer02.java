@@ -19,7 +19,7 @@ public class TcpServer02 {
 			
 			Sender sender = new Sender(socket);
 			Receiver receiver = new Receiver(socket);
-			
+//			java kr.or.ddit.basic.tcp
 			sender.start();
 			sender.start();
 		} catch (IOException e) {
