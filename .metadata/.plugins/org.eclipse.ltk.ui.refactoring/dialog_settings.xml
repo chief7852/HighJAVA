@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="RefactoringWizard.preview">
-		<item value="400" key="height"/>
-		<item value="600" key="width"/>
+		<item key="height" value="400"/>
+		<item key="width" value="600"/>
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
-		<item value="*" key="patterns"/>
-		<item value="false" key="moveWizard.updateQualifiedNames"/>
+		<item key="patterns" value="*"/>
+		<item key="moveWizard.updateQualifiedNames" value="false"/>
+	</section>
+	<section name="RefactoringStatusDialog">
+		<item key="DIALOG_WIDTH" value="816"/>
+		<item key="DIALOG_HEIGHT" value="490"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>
