@@ -3,10 +3,12 @@ package kr.or.ddit.basic;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Scanner;
 
 import kr.or.ddit.util.DBUtil;
+import kr.or.ddit.util.DBUtil2;
+import kr.or.ddit.util.DBUtil3;
 
 /*
  	- 회원을 관리하는 프로그램을 작성하시오.
@@ -25,10 +27,11 @@ import kr.or.ddit.util.DBUtil;
  	작업선택 >
  */
 public class JdbcTest07 {
-	private static Connection conn = DBUtil.getConnection();
+	private static Connection conn = DBUtil3.getConnection();
 	private static PreparedStatement prsm = null;
 	private static Scanner sc = new Scanner(System.in);	
 	private static ResultSet rs = null;
+	private static Statement stmt = null;
 	static JdbcTest07 hc = new JdbcTest07();
 	
 	public static void main(String[] args) {
@@ -149,30 +152,26 @@ public class JdbcTest07 {
 		System.out.println("수정할 자료의 아이디를 입력하십시오");
 		String userId = sc.nextLine();
 		try {
-			String sql = "select mem_id from mymember where mem_id = "+userId;
+			String sql = "select mem_id from mymember where mem_id = '"+userId+"'";
 			prsm = conn.prepareStatement(sql);
+			
+			System.out.println("---------");
 			rs = prsm.executeQuery();
 			String result ="";
+
 			while(rs.next())
 			{
 				result = (String) rs.getObject("mem_id");
+				
 			}
 			if(result.equals(userId))
 			{
-				System.out.print("변경할 이름 입력");
-				String userName = sc.nextLine();
-				System.out.print("변경할 전화번호");
-				String userTel = sc.nextLine();
-				System.out.print("변경할 주소");
-				String userAddr = sc.nextLine();
-				sql = "update mymember set mem_name = ? ,MEM_TEL=?,"
-						+ " MEM_ADDR=? where mem_id = ?";
-				prsm = conn.prepareStatement(sql);
-				prsm.setString(1, userName);
-				prsm.setString(2, userTel);
-				prsm.setString(3, userAddr);
-				prsm.setString(4, userId);
-				int cnt = prsm.executeUpdate();
+				System.out.println(sql);
+				sql = hc.alter2(userId);
+				
+				stmt = conn.prepareStatement(sql);
+
+				int cnt = stmt.executeUpdate(sql);
 				if(cnt == 0) {
 				 System.out.println("등록실패");
 				}else {
@@ -192,6 +191,24 @@ public class JdbcTest07 {
 		
 	}
 	
+	private String alter2(String userId) {
+		System.out.println("수정할 정보를 고르십시오");
+		System.out.println("1.이름 2.주소 3.전화번호");
+		switch(sc.nextLine())
+		{
+		case "1":System.out.print("변경할 이름 입력");
+				 String userName = sc.nextLine();
+				 return "update mymember set mem_name = '"+userName+"' where mem_id ='"+userId+"'";
+		case "2":System.out.print("변경할 전화번호");
+				 String userTel = sc.nextLine();
+				 return "update mymember set mem_tel = '"+userTel+"' where mem_id ='"+userId+"'";
+		case "3":System.out.print("변경할 주소");
+				 String userAddr = sc.nextLine();
+				 return "update mymember set mem_name = '"+userAddr+"' where mem_id ='"+userId+"'";
+			default : break;
+		}
+		return "";
+	}
 	void printDBAll() {
 		try {
 			String sql = "select * from mymember";

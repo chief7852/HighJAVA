@@ -15,13 +15,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="DBU"/>
+			<item value="DB"/>
 			<item value="if(te&gt;64&amp;&amp;te&lt;91)"/>
 			<item value="utf"/>
 			<item value="hash"/>
 			<item value="read"/>
 			<item value="F"/>
 			<item value="System.out.println(file5.getName() + &quot; 만들기 성공&quot;);"/>
-			<item value="null"/>
 		</list>
 		<list key="replacehistory">
 		</list>
