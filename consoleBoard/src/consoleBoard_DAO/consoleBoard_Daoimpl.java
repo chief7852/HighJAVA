@@ -18,16 +18,14 @@ public class consoleBoard_Daoimpl implements Board_Dao {
 		boolean tf = false;
 		try {
 			String sql = "insert into jdbc_board (board_no,board_title,board_writer,"
-					+ " board_date,board_cnt,board_content)"
-					+ " values(board_seq.nextVal,?,?,?,?,?)";
+					+ " board_content)"
+					+ " values(board_seq.nextVal,?,?,?)";
 			pre = conn.prepareStatement(sql);
 			pre.setString(1, newboard.getTitle());
 			pre.setString(2, newboard.getWriter());
-			pre.setString(3, newboard.getDate());
-			pre.setInt(4, newboard.getCnt());
-			pre.setString(5, newboard.getContent());
+			pre.setString(3, newboard.getContent());
 			
-			tf = (pre.executeUpdate()==0)? true : false;
+			tf = (pre.executeUpdate()!=0)? true : false;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {
@@ -44,8 +42,8 @@ public class consoleBoard_Daoimpl implements Board_Dao {
 		ResultSet rs = null;
 		List<MemberVO> list = new ArrayList<MemberVO>();
 		try {
-			String sql = "select board_no, board_title,board_writer"
-					+ ",board_cnt from jdbc_board";
+			String sql = "select board_no, board_title,board_writer "
+					+ " ,board_cnt from jdbc_board";
 			pre = conn.prepareStatement(sql);
 			rs = pre.executeQuery();
 			while(rs.next())
@@ -57,7 +55,7 @@ public class consoleBoard_Daoimpl implements Board_Dao {
 				list.add(vo);
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+
 		}finally {
 			if(conn != null)try {conn.close();}catch(Exception e) {}
 			if(pre != null)try {pre.close();}catch(Exception e) {}

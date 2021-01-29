@@ -1,6 +1,7 @@
 package kr.or.ddit.mvc.service;
 
 import java.util.List;
+import java.util.Map;
 
 import kr.or.ddit.mvc.dao.IMemberDao;
 import kr.or.ddit.mvc.dao.memberDaoImpl;
@@ -11,10 +12,19 @@ public class MemberServiceImpl implements IMemberService {
 	// Dao객체가 저장될 변수가 필요하다.
 	
 	private IMemberDao memDao;
+	private static MemberServiceImpl service;
 	
 	//생성자
-	public MemberServiceImpl() {
-		memDao = new memberDaoImpl();
+	private MemberServiceImpl() {
+//		memDao = new memberDaoImpl();		//오류 이유 : 싱글톤 패턴적용했기때문
+		memDao = memberDaoImpl.getInstance();
+	}
+	
+	public static MemberServiceImpl getInstance() {
+		if(service == null){
+			service = new MemberServiceImpl();
+		}
+		return service;
 	}
 	
 	@Override
@@ -45,6 +55,12 @@ public class MemberServiceImpl implements IMemberService {
 	public int getMemberCount(String memId) {
 		
 		return memDao.getMemberCount(memId);
+	}
+
+	@Override
+	public int updateMember2(Map<String, String> paramMap) {
+		// TODO Auto-generated method stub
+		return memDao.updateMember2(paramMap);
 	}
 
 }

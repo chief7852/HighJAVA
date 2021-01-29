@@ -1,16 +1,13 @@
 package kr.or.ddit.mvc.controller;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 import kr.or.ddit.mvc.service.IMemberService;
 import kr.or.ddit.mvc.service.MemberServiceImpl;
 import kr.or.ddit.mvc.vo.MemberVO;
-import kr.or.ddit.util.DBUtil3;
 
 /*
  	- 회원을 관리하는 프로그램을 작성하시오.
@@ -34,7 +31,7 @@ public class MemberController {
 	private IMemberService service;
 	
 	public MemberController() {
-		service = new MemberServiceImpl();
+		service  = MemberServiceImpl.getInstance();
 	}
 	
 	private static Scanner sc = new Scanner(System.in);	
@@ -146,6 +143,9 @@ public class MemberController {
 				System.out.println("주소 : ");
 				String userAddr = sc.nextLine();
 				MemberVO memVo = new MemberVO();
+				Map<String, String>paramMap = new HashMap<>();
+	
+				
 				memVo.setMem_id(userId);
 				memVo.setMem_name(userName);
 				memVo.setMem_tel(userTel);
@@ -165,6 +165,8 @@ public class MemberController {
 	private String alter2(String userId) {
 		System.out.println("수정할 정보를 고르십시오");
 		System.out.println("1.이름 2.주소 3.전화번호");
+		
+		
 		switch(sc.nextLine())
 		{
 		case "1":System.out.print("변경할 이름 입력");

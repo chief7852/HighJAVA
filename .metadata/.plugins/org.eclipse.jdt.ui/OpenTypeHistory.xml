@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=jdbcTest/src&lt;kr.or.ddit.mvc.service{IMemberService.java[IMemberService" modifiers="513" timestamp="1611812782276"/>
+    <typeInfo handle="=jdbcTest/src&lt;kr.or.ddit.mvc.service{IMemberService.java[IMemberService" modifiers="513" timestamp="1611900494629"/>
     <typeInfo handle="=consoleBoard/src&lt;consoleBoard_DAO{Board_Dao.java[Board_Dao" modifiers="513" timestamp="1611832933575"/>
     <typeInfo handle="=consoleBoard/src&lt;consoleBoard_service{consoleBoard_Service.java[consoleBoard_Service" modifiers="513" timestamp="1611833729326"/>
 </typeInfoHistroy>

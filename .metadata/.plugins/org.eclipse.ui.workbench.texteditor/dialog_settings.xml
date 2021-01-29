@@ -15,6 +15,7 @@
 		<item key="wholeword" value="false"/>
 		<item key="selection" value="insert"/>
 		<list key="findhistory">
+			<item value="Thread"/>
 			<item value="insert"/>
 			<item value="DBU"/>
 			<item value="DB"/>
@@ -22,7 +23,6 @@
 			<item value="utf"/>
 			<item value="hash"/>
 			<item value="read"/>
-			<item value="F"/>
 		</list>
 		<list key="replacehistory">
 		</list>

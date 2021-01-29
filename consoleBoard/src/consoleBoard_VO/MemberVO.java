@@ -17,6 +17,13 @@ public class MemberVO {
 	}
 	
 	
+	public MemberVO(String title, String content, String writer) {
+		super();
+		this.title = title;
+		this.content = content;
+		this.writer = writer;
+	}
+
 	public MemberVO() {
 		// TODO Auto-generated constructor stub
 	}
