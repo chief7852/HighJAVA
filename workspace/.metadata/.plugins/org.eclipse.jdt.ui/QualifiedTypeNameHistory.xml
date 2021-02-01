@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.MyGeneric"/>
-<fullyQualifiedTypeName name="homework.HotelOp"/>
-<fullyQualifiedTypeName name="homework.Prints_all"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="homework.Room"/>
-<fullyQualifiedTypeName name="java.util.Timer"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.EnumTest.Season"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.ConstTest"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.EnumTest.Color"/>
 <fullyQualifiedTypeName name="java.awt.MultipleGradientPaint.ColorSpaceType"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.MyThread1"/>
@@ -52,7 +43,6 @@
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadStopTest1"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
-<fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
 <fullyQualifiedTypeName name="java.lang.Runnable"/>
@@ -60,4 +50,14 @@
 <fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="homework.Printinloc"/>
 <fullyQualifiedTypeName name="java.lang.Comparable"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.Reader"/>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.nio.charset.Charset"/>
+<fullyQualifiedTypeName name="com.ibatis.common.resources.Resources"/>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClientBuilder"/>
+<fullyQualifiedTypeName name="kr.or.ddit.basic.LprodVO"/>
 </qualifiedTypeNameHistroy>

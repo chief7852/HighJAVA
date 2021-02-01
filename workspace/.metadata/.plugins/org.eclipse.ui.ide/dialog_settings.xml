@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="ChooseWorkspaceDialogSettings">
-		<item value="317" key="DIALOG_Y_ORIGIN"/>
-		<item value="310" key="DIALOG_X_ORIGIN"/>
-	</section>
 	<section name="ExternalProjectImportWizard">
-		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
-		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\A_TeachingMaterial\3.HighJava\workspace"/>
 			<item value="D:\A_TeachingMaterial\3.HighJava\pooi"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
@@ -23,5 +20,9 @@
 		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="317" key="DIALOG_Y_ORIGIN"/>
+		<item value="310" key="DIALOG_X_ORIGIN"/>
 	</section>
 </section>
