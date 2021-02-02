@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.EnumTest.Color"/>
-<fullyQualifiedTypeName name="java.awt.MultipleGradientPaint.ColorSpaceType"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.MyThread1"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.MyThread2"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.MyRunner"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadTest04"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.SumThread"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.lang.Double"/>
 <fullyQualifiedTypeName name="java.lang.Long"/>
@@ -43,7 +36,6 @@
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadStopTest1"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
 <fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
@@ -53,11 +45,19 @@
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.Reader"/>
-<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
 <fullyQualifiedTypeName name="com.ibatis.common.resources.Resources"/>
 <fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClientBuilder"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.LprodVO"/>
+<fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="kr.or.ddit.member.dao.memberDaoImpl"/>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
+<fullyQualifiedTypeName name="kr.or.ddit.util.SqlMapUtil"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="kr.or.ddit.vo.JdbcBoardVO"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

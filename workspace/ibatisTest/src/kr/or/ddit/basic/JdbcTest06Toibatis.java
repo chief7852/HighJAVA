@@ -1,12 +1,11 @@
 package kr.or.ddit.basic;
 
-import java.io.Reader;
-import java.nio.charset.Charset;
+import java.sql.SQLException;
 import java.util.Scanner;
 
-import com.ibatis.common.resources.Resources;
 import com.ibatis.sqlmap.client.SqlMapClient;
-import com.ibatis.sqlmap.client.SqlMapClientBuilder;
+
+import kr.or.ddit.util.SqlMapUtil;
 
 // jdbcTest 프로젝트에 있는 jdbcTest 06.java 의 처리방법을
 // ibatis를 이용하여 처리하는 것으로 변경하시오.
@@ -18,15 +17,18 @@ public class JdbcTest06Toibatis {
 
 public static void main(String[] args) {
 			Scanner sc = new Scanner(System.in);
+			SqlMapClient smc = null;
 			try {
 				
-				Charset charset = Charset.forName("UTF-8");
-				Resources.setCharset(charset);
+//				Charset charset = Charset.forName("UTF-8");
+//				Resources.setCharset(charset);
+//				
+//				Reader rd = Resources.getResourceAsReader("sqlMapConfig.xml");
+//				
+//				SqlMapClient smc = SqlMapClientBuilder.buildSqlMapClient(rd);
+//				rd.close();
 				
-				Reader rd = Resources.getResourceAsReader("sqlMapConfig.xml");
-				
-				SqlMapClient smc = SqlMapClientBuilder.buildSqlMapClient(rd);
-				rd.close();
+				smc = SqlMapUtil.getSqlMapClient();
 				
 				System.out.println("상품 번호를 입력하시오");
 				String lprod_Gu = sc.nextLine();
@@ -57,7 +59,7 @@ public static void main(String[] args) {
 					System.out.println("insert 작업 실패~~~");
 				}
 				
-			} catch (Exception e) {
+			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		
