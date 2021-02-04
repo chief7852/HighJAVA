@@ -1,17 +1,28 @@
 package kr.or.ddit.member.main;
 
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+
 import kr.or.ddit.member.service.IMemberService;
 import kr.or.ddit.member.service.MemberServiceImpl;
+import kr.or.ddit.util.CryptoUtil;
 import kr.or.ddit.vo.MemberVO;
 
 /*
  	- 회원을 관리하는 프로그램을 작성하시오.
  	(오라클 DB의 MyMember테이블 이용)
+ 	(회원 id를 암호화 시켜서 DB에 저장하고 화면에 보여줄 때는
+ 			원래의 데이터로 복호화 시켜서 보여준다.)
  	
  	- 아래 메뉴의 기능을 모두 구현하시오(CRUD 구현하기 연습)
  	주소,아이디,이름,전화번호
@@ -76,7 +87,10 @@ public class MemberController {
 		System.out.print("작업선택 >");
 	}
 	
-	void addDB() {
+	
+	
+	
+	void addDB() throws InvalidKeyException, UnsupportedEncodingException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
 		System.out.println("아이디 : ");
 		String userId = sc.nextLine();
 		System.out.println("이름 : ");
@@ -87,6 +101,10 @@ public class MemberController {
 		String userAddr = sc.nextLine();
 		// Service로 보낼 MemberVO객체를 생성하고
 		// 입력한 자료를 셋팅한다.
+		
+		String temp = CryptoUtil.encrtptAES256(userTel, userAddr);
+		
+		
 		MemberVO memVo = new MemberVO();
 		memVo.setMem_id(userId);
 		memVo.setMem_name(userName);
@@ -152,9 +170,9 @@ public class MemberController {
 				Map<String, String>paramMap = new HashMap<>();
 	
 				memVo.setMem_id(userId);
-				memVo.setMem_name(userName);
-				memVo.setMem_tel(userTel);
-				memVo.setMem_addr(userAddr);
+//				memVo.setMem_name(userName);
+//				memVo.setMem_tel(userTel);
+//				memVo.setMem_addr(userAddr);
 				cnt = service.updateMember(memVo);
 				if(cnt != 0) {
 				 System.out.println("등록실패");
