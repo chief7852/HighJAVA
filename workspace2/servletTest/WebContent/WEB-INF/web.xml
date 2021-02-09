@@ -20,4 +20,9 @@
   	<url-pattern>/servletTest01.do</url-pattern>
   </servlet-mapping>
   
+  <context-param>
+  	<param-name>FILE_NAME</param-name>
+  	<param-value>d:/d_other/test2.txt</param-value>
+  </context-param>
+  
 </web-app>
