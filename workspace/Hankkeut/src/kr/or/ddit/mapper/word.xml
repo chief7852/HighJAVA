@@ -7,7 +7,11 @@
 		<typeAlias alias="wordVo" type="kr.or.ddit.vo.WordVO"/>
 		<!-- 새글작성  -->
 		<insert id="insertWord">
+<<<<<<< HEAD
+		insert into word (word,w_no) values (#word#,word_seq.nextVal)
+=======
 		
+>>>>>>> 21a101f15d7b521418f0ae008cd3e53bd423ff7f
 		</insert>
 		
 	</sqlMap>
