@@ -28,7 +28,6 @@ INDEX VERSION 1.131+D:\A_TeachingMaterial\3.HighJava\.metadata\.plugins\org.ecli
 1980521198.index
 1879658970.index
 2761815052.index
-3738259948.index
 3784785780.index
 3939828670.index
 1371203699.index
