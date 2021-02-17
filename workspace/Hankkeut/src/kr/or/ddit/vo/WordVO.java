@@ -1,11 +1,11 @@
 package kr.or.ddit.vo;
 
 public class WordVO {
-<<<<<<< HEAD
+
 	private String word;
 	private int w_no;
-=======
-	String word;
+
+	
 	int word_no;
 	public String getWord() {
 		return word;
