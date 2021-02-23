@@ -12,7 +12,7 @@ public class TcpMultiChatClient {
 	public void clientStart() {
 		Socket socket = null;
 		try {
-			String serverIp = "192.168.0.81";
+			String serverIp = "192.168.0.99";
 			socket = new Socket(serverIp, 7777);
 			System.out.println("서버에 연결되었습니다...");
 			System.out.println();

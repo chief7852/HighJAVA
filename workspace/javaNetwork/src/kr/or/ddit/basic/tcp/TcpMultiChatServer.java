@@ -8,6 +8,7 @@ import java.net.Socket;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class TcpMultiChatServer {
 	// 접속한 클라이언트 정보를 저장할 Map객체 변수 선언
@@ -24,8 +25,11 @@ public class TcpMultiChatServer {
 	public void serverStart() {
 		ServerSocket server =null;
 		Socket socket = null;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("서버 번호를 입력하십시오");
+		int num = sc.nextInt();
 		try {
-			server = new ServerSocket(7777);
+			server = new ServerSocket(7776);
 			System.out.println("서버가 시작되었습니다...");
 			System.out.println();
 			
