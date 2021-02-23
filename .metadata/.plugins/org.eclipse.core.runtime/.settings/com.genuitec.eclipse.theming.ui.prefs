@@ -5,8 +5,13 @@ configurationInstallLocation=/C\:/Users/wnahd/eclipse/java-2020-12/eclipse/
 eclipse.preferences.version=1
 iconcolormode=primary
 includeThemingInOomph=false
+<<<<<<< HEAD
 last.download.attempt.time=1614066329303
 lastConfiguration=1614066322525
+=======
+last.download.attempt.time=1613304359516
+lastConfiguration=1613304351367
+>>>>>>> db669d439b63888737a223bfcc7a97f5cccca122
 newinstall=false
 showWelcomeDialog=false
 workbench.theme=Dark Gray
