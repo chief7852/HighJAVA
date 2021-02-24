@@ -18,11 +18,12 @@ import vo.ChatClient;
 @ServerEndpoint("/webChatServer")
 public class WebChatServer extends HttpServlet {
 	private static Map<Session, ChatClient> users = Collections.synchronizedMap(new HashMap<Session, ChatClient>());
-
+	public int maxnum = users.size();
+	
 	@OnMessage
 	public void onMsg(String message, Session session) throws IOException {
 		String userName = users.get(session).getName();
-		System.out.println(userName + " : " + message);
+		System.out.println(userName + " :"+maxnum+" " + message);
 
 		synchronized (users) {
 			Iterator<Session> it = users.keySet().iterator();

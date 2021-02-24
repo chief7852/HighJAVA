@@ -1,7 +1,10 @@
 package pooi;
 
+import java.awt.List;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Set;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
@@ -22,6 +25,7 @@ public class exel {
 		// 만약 각 시트를 읽기위해서는 FOR문을 한번더 돌려준다
 		XSSFSheet sheet = workbook.getSheetAt(0);
 		int temp = 0;
+		ArrayList<String> list = new ArrayList<String>();
 		// 행의 수
 		int rows = sheet.getPhysicalNumberOfRows();
 		for(rowIndex=1; rowIndex < rows; rowIndex++){
@@ -57,11 +61,12 @@ public class exel {
 							break;
 						}
 					}
+					
+					list.set(columnIndex, value);
 					if(!value.equals(null)&&!value.equals("false")) 
 					{System.out.print("각 셀 내용 :" + value);
 					
-					temp++;
-					System.out.println(temp);
+					
 					}
 					
 					

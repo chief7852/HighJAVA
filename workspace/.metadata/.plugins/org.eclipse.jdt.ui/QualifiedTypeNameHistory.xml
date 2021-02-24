@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadTest11.DisplayCharacter"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.DisplayCharacter"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.YieldThread"/>
-    <fullyQualifiedTypeName name="kr.or.ddit.basic.ThreadStopTest2"/>
-    <fullyQualifiedTypeName name="homework.Horse"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.lang.ClassCastException"/>
     <fullyQualifiedTypeName name="kr.or.ddit.basic.CalcPIThread"/>
     <fullyQualifiedTypeName name="kr.or.ddit.basic.PrintPIThread"/>
@@ -28,7 +22,6 @@
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.io.Reader"/>
-    <fullyQualifiedTypeName name="java.awt.List"/>
     <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
     <fullyQualifiedTypeName name="com.ibatis.common.resources.Resources"/>
     <fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClientBuilder"/>
@@ -42,7 +35,6 @@
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="kr.or.ddit.vo.JdbcBoardVO"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="kr.or.ddit.basic.Log4jTest"/>
     <fullyQualifiedTypeName name="java.util.logging.Level"/>
     <fullyQualifiedTypeName name="org.apache.log4j.Level"/>
@@ -60,4 +52,12 @@
     <fullyQualifiedTypeName name="kr.or.ddit.util.CryptoUtil"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="javax.websocket.Session"/>
+    <fullyQualifiedTypeName name="com.google.gson.Gson"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
 </qualifiedTypeNameHistroy>

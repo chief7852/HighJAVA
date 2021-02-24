@@ -116,23 +116,25 @@
 		</div>
 	</div>
 	<div>
-		<div><%=CountReady.ready %></div>
-		<input id="Ready" type="button" value="ready">
+		<div id="rere"><%=CountReady.ready %></div>
+		<input id="Rea" type="button" value="ready">
 	</div>
 </body>
 <script type="text/javascript">
-	
 	$(function(){
-		$('#Ready').on('click', function(){
-			<%=CountReady.ready++ %>
+		$('#Rea').on('click' ,function(){
+			$('#rere').empty();
+			
 		})
 	})
+</script>
+<script type="text/javascript">
 
 	var textarea = document.getElementById("messageWindow");
 // 	var webSocket = new WebSocket('ws://ec2-13-125-250-66.ap-northeast-2.compute.amazonaws.com:8080/DevEricServers/webChatServer');
 	
 	// 로컬에서 테스트할 때 사용하는 URL입니다.
-	var webSocket = new WebSocket('ws://localhost:8032/chatchat/webChatServer');
+	var webSocket = new WebSocket('ws://192.168.0.97:8032/chatchat/webChatServer');
 	var inputMessage = document.getElementById('inputMessage');
 	
 	webSocket.onerror = function(e){
