@@ -1,0 +1,13 @@
+package kr.or.ddit.servlet01;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+
+public class AbstractUseTmplServlet extends HttpServlet {
+
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+		super.init();
+	}
+}

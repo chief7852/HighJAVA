@@ -1,0 +1,33 @@
+package kr.or.ddit.servlet01;
+import javax.servlet.http.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+
+import java.io.*;
+import java.util.Date;
+
+
+@WebServlet("/01/imageForm.tmpl")
+public class ImageFormServlet extends AbstractUseTmplServlet{
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

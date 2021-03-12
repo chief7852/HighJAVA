@@ -1,0 +1,88 @@
+package kr.or.ddit.servlet01;
+import javax.servlet.http.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+
+import java.io.*;
+import java.util.Date;
+
+
+@WebServlet("/01/imageForm.tmpl")
+public class ImageFormServlet extends HttpServlet{
+	private ServletContext application;
+	@Override
+	public void init(ServletConfig config) throws ServletException {
+	
+		super.init(config);
+		application = config.getServletContext();
+	}
+	protected void doGet(HttpServletRequest req,
+                     HttpServletResponse resp)
+              throws ServletException,
+                     IOException{
+		System.out.println("서블릿이 요청 받았음");
+		resp.setContentType("text/html;charset=UTF-8");
+		String folder = "d:/contents";			 
+		File contents = new File(folder);
+		String[] children = contents.list(new FilenameFilter() {
+			
+			@Override
+			public boolean accept(File dir, String name) {
+				String mime = application.getMimeType(name);
+				return mime!=null && mime.startsWith("image/");
+			}
+		});
+		
+		
+		String tmplPath = req.getServletPath();
+		InputStream is = application.getResourceAsStream(tmplPath);
+		InputStreamReader isr = new InputStreamReader(is);
+		BufferedReader reader = new BufferedReader(isr);
+		String temp = null;
+		StringBuffer tmplSrc = new StringBuffer();
+		while((temp =reader.readLine())!=null) {
+			tmplSrc.append(String.format("%s\n", temp));
+		}
+		Date today = new Date();
+		StringBuffer options = new StringBuffer();
+		
+		for(String child : children){
+			  options.append(String.format("<option>%s</option>", child));
+		}
+		
+		String html =tmplSrc.toString()
+				.replace("%options%", options.toString())
+				.replace("%today%", today.toString());
+		 
+		/* StringBuffer html = tmplSrc; */
+		
+		PrintWriter out = null;
+		try {
+			out = resp.getWriter();
+			out.println(html);
+		}finally {
+			if(out!=null)
+				out.close();
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
