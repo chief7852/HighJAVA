@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="kr.or.ddit.basic.JdbcTest02"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.sql.SQLDataException"/>
     <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
@@ -40,4 +39,11 @@
     <fullyQualifiedTypeName name="consoleBoard_VO.MemberVO"/>
     <fullyQualifiedTypeName name="java.lang.Runnable"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="pooi.IWordDao"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.mapper.SqlMapClientFactory"/>
+    <fullyQualifiedTypeName name="pooi.WordDaoImpl"/>
+    <fullyQualifiedTypeName name="kr.or.ddit.vo.WordVO"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="pooi.IWordService"/>
+    <fullyQualifiedTypeName name="pooi.WordServiceImpl"/>
 </qualifiedTypeNameHistroy>

@@ -13,18 +13,19 @@
 		<item key="casesensitive" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="wholeword" value="false"/>
-		<item key="selection" value="insert"/>
+		<item key="selection" value="&quot;"/>
 		<list key="findhistory">
+			<item value="&apos;"/>
+			<item value="‘"/>
 			<item value="Thread"/>
 			<item value="insert"/>
 			<item value="DBU"/>
 			<item value="DB"/>
 			<item value="if(te&gt;64&amp;&amp;te&lt;91)"/>
 			<item value="utf"/>
-			<item value="hash"/>
-			<item value="read"/>
 		</list>
 		<list key="replacehistory">
+			<item value="&quot;"/>
 		</list>
 	</section>
 </section>
