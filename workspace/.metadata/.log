@@ -1818,23 +1818,40 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jdt.ui 2 0 2021-02-24 12:26:04.256
 !MESSAGE Some content proposal kinds have been uninstalled. It is recommended to review the content assist settings.
+<<<<<<< HEAD
 !SESSION 2021-02-25 00:54:16.703 -----------------------------------------------
+=======
+!SESSION 2021-02-25 08:54:59.485 -----------------------------------------------
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 eclipse.buildId=4.18.0.I20201202-1800
 java.version=15.0.1
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+<<<<<<< HEAD
 Framework arguments:  -product org.eclipse.epp.package.jee.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
 !ENTRY org.eclipse.jface 2 0 2021-02-25 00:57:05.905
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
 !SUBENTRY 1 org.eclipse.jface 2 0 2021-02-25 00:57:05.905
+=======
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data D:\A_TeachingMaterial\3.HighJava\workspace -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2021-02-25 08:55:03.443
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-02-25 08:55:03.443
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 !MESSAGE A conflict occurred for CTRL+SHIFT+T:
 Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
 		Open a type in a Java editor,
 		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@37acf9b1,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b6d94fc,
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
@@ -1842,11 +1859,16 @@ Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
 		,
 		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@279e9c95,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@71c77042,
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.ui 4 4 2021-02-25 00:57:14.282
 !MESSAGE Unable to create part
 !STACK 1
@@ -2120,6 +2142,9 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/pooi/src/pooi
 !MESSAGE Cannot determine URI for '/pooi/src/pooi/exel.java'.
 
 !ENTRY org.eclipse.jface 4 0 2021-02-25 00:57:14.346
+=======
+!ENTRY org.eclipse.jface 4 0 2021-02-25 08:55:06.633
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 !MESSAGE /icons/full/eview16/outline_co.gif
 !STACK 0
 java.io.FileNotFoundException: /icons/full/eview16/outline_co.gif
@@ -2222,7 +2247,11 @@ java.io.FileNotFoundException: /icons/full/eview16/outline_co.gif
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jface 2 0 2021-02-25 00:57:14.351
+=======
+!ENTRY org.eclipse.jface 2 0 2021-02-25 08:55:06.635
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 !MESSAGE The image could not be loaded: URLImageDescriptor(platform:/plugin/org.eclipse.ui.views/icons/full/eview16/outline_co.gif)
 !STACK 0
 org.eclipse.jface.resource.DeviceResourceException: Unable to create resource URLImageDescriptor(platform:/plugin/org.eclipse.ui.views/icons/full/eview16/outline_co.gif)
@@ -2312,7 +2341,11 @@ org.eclipse.jface.resource.DeviceResourceException: Unable to create resource UR
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jface 4 0 2021-02-25 00:57:14.374
+=======
+!ENTRY org.eclipse.jface 4 0 2021-02-25 08:55:06.642
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 !MESSAGE /icons/full/eview16/problems_view.gif
 !STACK 0
 java.io.FileNotFoundException: /icons/full/eview16/problems_view.gif
@@ -2408,7 +2441,11 @@ java.io.FileNotFoundException: /icons/full/eview16/problems_view.gif
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jface 2 0 2021-02-25 00:57:14.377
+=======
+!ENTRY org.eclipse.jface 2 0 2021-02-25 08:55:06.643
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 !MESSAGE The image could not be loaded: URLImageDescriptor(platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.gif)
 !STACK 0
 org.eclipse.jface.resource.DeviceResourceException: Unable to create resource URLImageDescriptor(platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.gif)
@@ -2491,7 +2528,11 @@ org.eclipse.jface.resource.DeviceResourceException: Unable to create resource UR
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jface 4 0 2021-02-25 00:57:14.381
+=======
+!ENTRY org.eclipse.jface 4 0 2021-02-25 08:55:06.645
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 !MESSAGE /icons/full/eview16/prop_ps.gif
 !STACK 0
 java.io.FileNotFoundException: /icons/full/eview16/prop_ps.gif
@@ -2587,7 +2628,11 @@ java.io.FileNotFoundException: /icons/full/eview16/prop_ps.gif
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jface 2 0 2021-02-25 00:57:14.384
+=======
+!ENTRY org.eclipse.jface 2 0 2021-02-25 08:55:06.646
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 !MESSAGE The image could not be loaded: URLImageDescriptor(platform:/plugin/org.eclipse.ui.views/icons/full/eview16/prop_ps.gif)
 !STACK 0
 org.eclipse.jface.resource.DeviceResourceException: Unable to create resource URLImageDescriptor(platform:/plugin/org.eclipse.ui.views/icons/full/eview16/prop_ps.gif)
@@ -2670,7 +2715,11 @@ org.eclipse.jface.resource.DeviceResourceException: Unable to create resource UR
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jface 4 0 2021-02-25 00:57:14.812
+=======
+!ENTRY org.eclipse.jface 4 0 2021-02-25 08:55:06.809
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 !MESSAGE /icons/full/eview16/defaultview_misc.gif
 !STACK 0
 java.io.FileNotFoundException: /icons/full/eview16/defaultview_misc.gif
@@ -2737,7 +2786,11 @@ java.io.FileNotFoundException: /icons/full/eview16/defaultview_misc.gif
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jface 2 0 2021-02-25 00:57:14.815
+=======
+!ENTRY org.eclipse.jface 2 0 2021-02-25 08:55:06.810
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 !MESSAGE The image could not be loaded: URLImageDescriptor(platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.gif)
 !STACK 0
 org.eclipse.jface.resource.DeviceResourceException: Unable to create resource URLImageDescriptor(platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.gif)
@@ -2791,7 +2844,11 @@ org.eclipse.jface.resource.DeviceResourceException: Unable to create resource UR
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jface 4 0 2021-02-25 00:57:14.976
+=======
+!ENTRY org.eclipse.jface 4 0 2021-02-25 08:55:06.863
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 !MESSAGE /icons/full/eview16/defaultview_misc.gif
 !STACK 0
 java.io.FileNotFoundException: /icons/full/eview16/defaultview_misc.gif
@@ -2867,7 +2924,11 @@ java.io.FileNotFoundException: /icons/full/eview16/defaultview_misc.gif
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jface 4 0 2021-02-25 00:57:15.000
+=======
+!ENTRY org.eclipse.jface 4 0 2021-02-25 08:55:06.870
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05
 !MESSAGE /icons/full/eview16/outline_co.gif
 !STACK 0
 java.io.FileNotFoundException: /icons/full/eview16/outline_co.gif
@@ -2943,6 +3004,7 @@ java.io.FileNotFoundException: /icons/full/eview16/outline_co.gif
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.e4.ui.workbench 2 0 2021-02-25 00:57:15.745
 !MESSAGE Removing PartDescriptorImpl with the "diagramTable" id and the "Diagrams" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
 
@@ -3050,3 +3112,11 @@ java.net.UnknownHostException: jope.ow2.org
 
 !ENTRY org.eclipse.jst.server.tomcat.core 4 0 2021-02-25 02:07:54.895
 !MESSAGE Port 8080 required by Tomcat v9.0 Server at localhost is already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+=======
+!ENTRY org.eclipse.egit.ui 2 0 2021-02-25 08:55:07.536
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\PC-03'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+>>>>>>> 34ec87bf3fbbf77ee4caef85a60fd5792556df05

@@ -1,0 +1,9 @@
+<html>
+<body>
+<form action='image.do'>
+<select name="image">
+</select>
+<input type="submit" value="전송">
+</form>
+</body>
+</html>

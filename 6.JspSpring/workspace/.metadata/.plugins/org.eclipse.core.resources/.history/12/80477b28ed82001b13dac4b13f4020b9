@@ -1,0 +1,12 @@
+package kr.or.ddit.servlet01;
+
+import javax.servlet.http.HttpServlet;
+
+/**
+ * Servlet : 자바를 기반으로 웹 어플리케이션을 구현하기 위한 명세 혹은 그 명세에 따른 API모음.
+ * 개발 단계
+ * 1. HttpServlet 의 구현체로 서블릿 소스 작성.
+ */
+public class DescriptionServlet extends HttpServlet{
+
+}

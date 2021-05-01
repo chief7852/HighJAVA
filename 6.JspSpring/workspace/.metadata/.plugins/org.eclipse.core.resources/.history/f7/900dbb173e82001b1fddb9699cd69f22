@@ -1,0 +1,45 @@
+package kr.or.ddit;
+
+import java.io.*;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ImageServlet extends HttpServlet{
+	public void doGet(HttpServletRequest req, HttpServletResponse rep) throws ServletException, 
+	IOException{
+		String mime = "image/jpeg";
+		rep.setContentType(mime);
+		
+		String folder = "d:/contents";
+		
+		String imageFilename = "대나무숲.jpg";
+		
+		rep.setContentType("image/jpg");
+		
+		File imageFile = new File(folder,imageFilename);
+		FileInputStream fis = new FileInputStream(imageFile);
+		
+		ServletOutputStream out = rep.getOutputStream();
+		
+	try{
+		
+
+		//String imapath = rep.setServletContext().getRealpath("/second/WEB-INF/src/peng.jpg");
+		
+		//BufferedInputStream in = new BufferedInputStream(new FileInputStream(imapath));
+		
+			byte[] buffer = new byte[1024];
+		int pointer = -1;
+		while((pointer = fis.read(buffer)) != -1){
+				out.write(buffer, 0, pointer);
+		}
+	}catch(Exception e){
+		
+	}
+	
+	}
+		
+}

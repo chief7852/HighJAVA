@@ -1,0 +1,45 @@
+package kr.or.ddit.suvlet01;
+
+import java.io.*;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ImageServlet extends HttpServlet {
+	public void doGet(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException {
+		String imageFilename = req.getParameter("image");
+		if (imageFilename == null || imageFilename.isEmpty()) {
+			rep.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return;
+		}
+
+		String folder = "d:/contents";
+		File imageFile = new File(folder, imageFilename);
+		if (!imageFile.exists()) {
+			rep.sendError(HttpServletResponse.SC_NOT_FOUND);
+			return;
+		}
+		
+		String mime = getServletContext().getMimeType(imageFilename);
+		rep.setContentType(mime);
+		rep.setContentType("image/jpeg");
+
+		FileInputStream fis = new FileInputStream(imageFile);
+
+		ServletOutputStream out = rep.getOutputStream();
+
+		try {
+			byte[] buffer = new byte[1024];
+			int pointer = -1;
+			while ((pointer = fis.read(buffer)) != -1) {
+				out.write(buffer, 0, pointer);
+			}
+		} catch (Exception e) {
+
+		}
+
+	}
+
+}

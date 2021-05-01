@@ -1,0 +1,68 @@
+package kr.or.ddit.servlet01;
+import javax.servlet.http.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+
+import java.io.*;
+
+@WebServlet("01/imageForm.do")
+public class ImageFormServlet extends HttpServlet{
+	private ServletContext application;
+	@Override
+	public void init(ServletConfig config) throws ServletException {
+	
+		super.init(config);
+		application = config.getServletContext();
+	}
+	protected void doGet(HttpServletRequest req,
+                     HttpServletResponse resp)
+              throws ServletException,
+                     IOException{
+		resp.setContentType("text/html;charset=UTF-8");
+		String folder = "d:/contents";			 
+		File contents = new File(folder);
+		String[] children = contents.list(new FilenameFilter() {
+			
+			@Override
+			public boolean accept(File dir, String name) {
+				String mime = application.getMimeType(name);
+				return mime!=null && mime.startsWith("image/");
+			}
+		});
+		
+		
+		String tmplPath = "/01/imageForm.tmpl";
+		application.getResourceAsStream(tmplPath)
+		for(String child : children){
+			html.append(String.format("<option>%s</option>", child));
+		}
+		PrintWriter out = null;
+		try {
+			out = resp.getWriter();
+			out.println(html);
+		}finally {
+			if(out!=null)
+				out.close();
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

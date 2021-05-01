@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Insert title here</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="../home_js/jquery-3.5.1.min.js"></script>
 <style type="text/css">
 	#chatArea {
 		display: none;	
@@ -36,14 +38,34 @@
 		    <!-- 접속 버튼 -->
 		    <input type="button" value="접속하기" id="btnConnect">
 	    </div>
+	    <div id="characters">
+         <%-- <img src="images/spongebob.png" style="width:100px; height:100px"><br>
+         <label><%=userId%></label> --%>
+      </div>
     </div>
     
+    
+    <script type="text/javascript">
+ // WebSocket 서버와 접속이 되면 호출되는 함수   
+    webSocket.onopen = function(message) {
+       /* var user = document.getElementById("user");
+       var vhtml = "<div class='character'>";
+          vhtml += "<img src='images/spongebob.png' style='width:100px; height:100px'><br>";
+          vhtml += "<label>" + user +"</label>";
+       
+       $('#characters').html(vhtml); */
+       // 콘솔 텍스트에 메시지를 출력한다.   
+       messageTextArea.value += "Server connect...\n";
+    };
+    </script>
     <script type="text/javascript">
     	var webSocket = null; // 웹소켓 변수 선언
         var messageTextArea = document.getElementById("messageTextArea");
     	var messageText = document.getElementById("messageText");
     	var userText = document.getElementById("userId");
-    	
+    	var vhtml = "<div class='character'>";
+        vhtml += "<img src='아토1.jpg' style='width:100px; height:100px'><br>";
+        /* vhtml += "<label>" + user +"</label>"; */
     	function connectting(){
     		if(userText.value.trim()==""){
     			alert("접속자 ID를 입력하세요");
@@ -51,10 +73,11 @@
     			return;
     		}
 	        //웹소켓 초기화
-	        webSocket = new WebSocket("ws://localhost/webSocketTest/websocktMultiChat");
+	        webSocket = new WebSocket("ws://localhost:8032/chatchat/websocktMultiChat");
 	        
 	    	// 접속 성공하면 
 	        webSocket.onopen = function onOpen(event){
+	        	$('#characters').html(vhtml);
 	        	document.getElementById("connectArea").style.display = "none";
 	    		document.getElementById("chatArea").style.display = "block";
 	        	webSocket.send(userText.value);
@@ -111,5 +134,21 @@
         	closing();
         }
     </script>
+    	<script type="text/javascript">
+$(function() {
+				var messageText = document.getElementById("messageText");
+			$('#messageText').keydown(function(key) {
+				if (key.keyCode == 13) {
+					webSocket.send(messageText.value);
+					messageText.value = "";
+				}
+			});
+			$('#btn-submit').click(function() {
+				webSocket.send(messageText.value);
+				messageText.value = "";
+			});
+
+		})
+	</script>
 </body>
 </html>
