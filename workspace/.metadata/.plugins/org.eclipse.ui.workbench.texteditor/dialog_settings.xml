@@ -8,6 +8,7 @@
 		<item key="wrap" value="true"/>
 		<item key="wholeword" value="false"/>
 		<list key="findhistory">
+			<item value="add"/>
 			<item value="message"/>
 			<item value="e="/>
 			<item value="CountReady"/>
@@ -15,7 +16,6 @@
 			<item value="onOpen"/>
 			<item value="/"/>
 			<item value="gu"/>
-			<item value="xp"/>
 		</list>
 		<list key="replacehistory">
 		</list>

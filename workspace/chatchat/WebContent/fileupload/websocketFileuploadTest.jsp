@@ -8,9 +8,8 @@
     <script type="text/javascript">
         var ws = null;    
         function connector(){
-        		// 웹소켓 초기화
-        		ws://localhost:8032/chatchat/websocktMultiChat
-            var url = "ws://localhost:8032/chatchat/upload"; 
+        		// 웹소켓 초기화ws://localhost:8032/chatchat/websocktMultiChat
+            var url = "ws://localhost/chatchat/upload"; 
             ws = new WebSocket(url);
             
             ws.binaryType="arraybuffer"; // 전송할 binary데이터의 종류 설정

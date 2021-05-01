@@ -19,14 +19,19 @@
 	<!-- 송신 버튼 -->
 	<input type="button" value="Send" onclick="sendMessage()">
 
+	<div id="mem">
+	
+	</div>
+	
 	<script type="text/javascript">
 		//웹소켓 초기화 (웹소켓 URI 주소 : ws://서버주소/컨텍스트이름(프로젝트명)/웹소켓서비스명
-		var webSocket = new WebSocket("ws://localhost:8032/chatchat/websocktMultiChat");
+		var webSocket = new WebSocket("ws://localhost:8032/chatchat/basicsocket");
 
 		var messageTextArea = document.getElementById("messageTextArea");
 
 		//메시지가 오면 messageTextArea요소에 메시지를 추가한다.
 		webSocket.onmessage = function processMessge(message) {
+			
 			//Json 풀기
 			var jsonData = JSON.parse(message.data);
 			if (jsonData.message != null) {
